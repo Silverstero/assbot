@@ -19,8 +19,7 @@ async def ping(ctx):
 @lightbulb.implements(lightbulb.SlashCommand)
 async def confess(ctx):
   targetchannel = await bot.rest.fetch_channel('1125971259570802769')
-  await targetchannel.send('Somebody did someting embarrasing! they: ' +
-                           ctx.options.confession + 'should we forgive them?')
+  await targetchannel.send(ctx.options.confession + 'should we forgive them?')
 
 
 bot.run()
